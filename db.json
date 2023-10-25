@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "emailOrLogin": "eqwe",
+      "password": "eqwe",
+      "id": 1
+    },
+    {
+      "emailOrLogin": "eqwe2",
+      "password": "eqwe",
+      "id": 2
+    },
+    {
+      "emailOrLogin": "qwewqe",
+      "password": "eqweww",
+      "id": 3
+    },
+    {
+      "emailOrLogin": "qwewqeeqw",
+      "password": "eqweww",
+      "id": 4
+    },
+    {
+      "emailOrLogin": "qwewqeeqw",
+      "password": "eqwewwwqe",
+      "id": 5
+    }
+  ]
+}
