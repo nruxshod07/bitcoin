@@ -11,8 +11,8 @@ let postData = async (url, body) => {
 };
 let form = document.forms[0];
 let btn = document.querySelector("button");
-let nameInput = document.querySelector(".name");
-let surnameInput = document.querySelector(".surname");
+let emailOrLogin = document.querySelector(".emailOrLogin");
+let password = document.querySelector(".password");
 let signIn = document.querySelector(".signIn");
 let signUp = document.querySelector(".signUp");
 let error;
@@ -21,7 +21,7 @@ signIn.onclick = () => {
   form.onsubmit = (e) => {
     e.preventDefault();
     error = false;
-    if (nameInput.value.length === 0 || surnameInput.value.lenght === 0) {
+    if (emailOrLogin.value.length === 0 || password.value.length === 0) {
       error = true;
     } else error = false;
 
@@ -29,8 +29,6 @@ signIn.onclick = () => {
       console.log("error");
     } else {
       SignIn();
-
-      // window.location.href = 'mainPage/index.html'
     }
   };
 };
@@ -38,35 +36,18 @@ signUp.onclick = () => {
   form.onsubmit = (e) => {
     e.preventDefault();
     error = false;
-    if (nameInput.value.length === 0 || surnameInput.value.lenght === 0) {
+    if (emailOrLogin.value.length <= 0 || password.value.length <= 0) {
       error = true;
-    } else error = false;
-
+    } else {
+      error = false;
+    }
+    console.log(emailOrLogin.value.length, password.value.length);
     if (error) {
       console.log("error");
-    } else {
+    } else if (!error) {
       SignUp();
-      fetch("http://localhost:7000/users")
-        .then((res) => res.json())
-        .then((res) => console.log(res));
-      // window.location.href = 'mainPage/index.html'
     }
   };
-};
-
-form.onsubmit = (e) => {
-  e.preventDefault();
-  error = false;
-  if (nameInput.value.length === 0 || surnameInput.value.lenght === 0) {
-    error = true;
-  } else error = false;
-
-  if (error) {
-    console.log("error");
-  } else {
-    submit();
-    // window.location.href = 'mainPage/index.html'
-  }
 };
 
 function SignUp() {
@@ -79,11 +60,8 @@ function SignUp() {
   });
   console.log(user);
 
-  postData("/users", user).then((res) => {
-    if (res.status === 200 || res.status === 201) {
-      //   location.assign("/pages/signin");
-    }
-  });
+  postData("/users", user);
+  window.location.href = "/pages/overview/";
 }
 
 function SignIn() {
@@ -94,28 +72,19 @@ function SignIn() {
   fm.forEach((value, key) => {
     user[key] = value;
   });
-  console.log(user);
-  //   fetch("http://localhost:7000/users")
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       let { user } = res;
-  //     })
-  //     .then((res) => {
-
-  //     });
 
   fetch("http://localhost:7000/users")
     .then((res) => res.json())
     .then((res) => {
-      let error;
       res.forEach((userInfo) => {
+console.log(userInfo);
         if (
           userInfo.emailOrLogin === user.emailOrLogin &&
           userInfo.password === user.password
         ) {
-            window.location.href = "mainPage/index.html"
+          window.location.href = "/pages/overview/";
         } else {
-            console.log("bye");
+          console.log("error");
         }
       });
     });

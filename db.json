@@ -1,29 +1,92 @@
 {
-  "users": [
-    {
-      "emailOrLogin": "eqwe",
-      "password": "eqwe",
+  "users": [{
+      "emailOrLogin": "eqweqwe",
+      "password": "eqweqweqw",
       "id": 1
     },
     {
-      "emailOrLogin": "eqwe2",
-      "password": "eqwe",
+      "emailOrLogin": "eqweqwew",
+      "password": "eqweqweqww",
       "id": 2
     },
     {
-      "emailOrLogin": "qwewqe",
-      "password": "eqweww",
+      "emailOrLogin": "eqweqwe",
+      "password": "eqweqwe",
       "id": 3
     },
     {
-      "emailOrLogin": "qwewqeeqw",
-      "password": "eqweww",
+      "emailOrLogin": "eqweqwe",
+      "password": "eqweqw",
       "id": 4
     },
     {
-      "emailOrLogin": "qwewqeeqw",
-      "password": "eqwewwwqe",
+      "emailOrLogin": "eqweqw",
+      "password": "eqweqwe",
       "id": 5
+    },
+    {
+      "emailOrLogin": "eqweqw",
+      "password": "eqweqwe",
+      "id": 6
+    },
+    {
+      "sum": "312312",
+      "id": 7
+    },
+    {
+      "emailOrLogin": "eqewqe",
+      "password": "eqweqwe",
+      "id": 8
+    },
+    {
+      "emailOrLogin": "eqewqe",
+      "password": "eqweqwe",
+      "id": 9
+    },
+    {
+      "emailOrLogin": "eqewqe",
+      "password": "eqweqwe",
+      "id": 10
+    },
+    {
+      "emailOrLogin": "eqewqe",
+      "password": "eqweqwe",
+      "id": 11
+    },
+    {
+      "emailOrLogin": "eqewqe",
+      "password": "eqweqwe",
+      "id": 12
+    },
+    {
+      "emailOrLogin": "eqwewqe",
+      "password": "eqweqwe",
+      "id": 13
+    }
+  ],
+  "transictions": [{
+      "time": "17:14",
+      "date": "2023-11-1",
+      "sum": "13123",
+      "id": "74EKRJMXkhKDR5dj34578fgirwE22sfg"
+    },
+    {
+      "time": "17:42",
+      "date": "2023-11-1",
+      "sum": "31232",
+      "id": "74EKRJMXkhKDR5dj34578fgirwE22sfg"
+    },
+    {
+      "time": "17:43",
+      "date": "2023-11-1",
+      "sum": "132",
+      "id": "74EKRJMXkhKDR5dj34578fgirwE22sfg"
+    },
+    {
+      "time": "17:43",
+      "date": "2023-11-1",
+      "sum": "3123123",
+      "id": "74EKRJMXkhKDR5dj34578fgirwE22sfg"
     }
   ]
 }
